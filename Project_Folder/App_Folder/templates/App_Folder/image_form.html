@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Image form{% endblock title %}
+{% block content %}
+
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form}}
+    <button type="submit">Image Send</button>
+</form>
+
+
+{% endblock content %}
