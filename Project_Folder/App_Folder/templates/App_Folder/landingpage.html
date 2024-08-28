@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-
+{% block css %} <link rel="stylesheet" href="{% static 'App_Folder/post.css' %}"> {% endblock css %}
 {% block title %}landing page{% endblock title %}
 {% block content %}
 <div class="container px-4 py-5" id="custom-cards">
@@ -14,7 +14,7 @@
     
     <div class="col rounded-4 shadow-lg bg-image hover-zoom">
       <div class="bg-image hover-zoom text-bg-dark bg-dark">
-        <img  src=" {% static "images\photo1 - Copy.jpg" %} " alt="" class="w-100">
+        <img  src=" {% static "images\IMG_20230629_181033.jpg" %} " alt="" class="w-100">
       </div>
   </div>
   </div>
@@ -30,6 +30,15 @@
     <h1 class=" border-bottom text-success" id="about">Feedback</h1>
   </div>
   
+  <div class="form-container">
+  <form action="" method="post" enctype="multipart/form-data" class="form-group">
+    {% csrf_token %}
+    <div class="form-group">
+    {{form}}
+    <button type="submit">command</button>
+  </div>
+</form>
+
   
   {% comment %} <a href="{% url "command" %}"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#{{trash.slug}}">
    Feedbackform
