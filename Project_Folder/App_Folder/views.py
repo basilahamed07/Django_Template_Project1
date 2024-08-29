@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .models import *
 from .forms import *
 from django.views.generic.edit import CreateView
+from django.http import HttpResponseRedirect
 
 # Create your views here.
 def landing_page(request):
@@ -10,6 +11,7 @@ def landing_page(request):
         form=commandForms(request.POST)
         if form.is_valid():
             form.save()
+            return HttpResponseRedirect("/thankyou")
     else:
         form=commandForms()
     return render(request,"App_Folder/landingpage.html",{"data":latest_data,"form":form})
@@ -29,11 +31,6 @@ def dataretrive(request,uniqe):
 
 def thankyou(request):
     return render(request,"App_Folder/thankyou.html")
-
-
-def render_image(request):
-    image_object = Post.objects.all()
-    return render(request,"App_Folder/image_render.html",{"image_object":image_object})
 
 class ImageCreateView(CreateView):
     model = Post

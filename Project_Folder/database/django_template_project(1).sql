@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3333
--- Generation Time: Aug 28, 2024 at 09:07 PM
+-- Generation Time: Aug 29, 2024 at 11:36 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -63,7 +63,18 @@ INSERT INTO `app_folder_command` (`id`, `user_name`, `user_email`, `text`, `post
 (1, 'BAsil ahamed', 'basilahamed46@gmail.com', 'super post', 1),
 (2, 'noting', 'nothing@gmail.com', 'noting to say', 2),
 (3, 'farvez', 'farvez@gmail.com', 'Super pic', 1),
-(8, 'mishal', 'mishal@gmail.com', 'super pic bro', 3);
+(8, 'mishal', 'mishal@gmail.com', 'super pic bro', 3),
+(9, 'chainsawman', 'chainsaw@gmail.com', 'super series', 6),
+(10, 'chainsawman', 'chainsaw@gmail.com', 'super series', 6),
+(11, 'pythonuser', 'python@gmail.com', 'here the saithma', 4),
+(12, 'pythonuser', 'python@gmail.com', 'here the saithma', 4),
+(13, 'pythonuser22', 'python@gmail.com', 'here the saithma', 5),
+(14, 'pythonuser22', 'python@gmail.com', 'here the saithma', 5),
+(15, 'saithama46', 'saithama@gmail.com', 'saithama strong', 4),
+(16, 'saithama46', 'saithama@gmail.com', 'saithama strong', 4),
+(17, 'demonslayer46', 'demonslayer@gmail.com', 'good series', 7),
+(18, 'demonslayer46', 'demonslayer@gmail.com', 'good series', 7),
+(19, 'mark', 'markfb@gmail.com', 'super pic dude', 1);
 
 -- --------------------------------------------------------
 
@@ -94,7 +105,8 @@ INSERT INTO `app_folder_post` (`id`, `title`, `image_name`, `image`, `date`, `ti
 (4, 'saithama', 'saithama onepunchman', 'images/saithama.jpg', '2024-08-29', '00:32:30.976403', 'saithama', 'onepunchman overpowerful', 1),
 (5, 'daathnote', 'deathnote here', 'images/deathnote.jpg', '2024-08-29', '00:33:32.341242', 'daathnote', 'deathnote magic overpowerful', 1),
 (6, 'chainsawman', 'chaindawman', 'images/chainsawman.jpg', '2024-08-29', '00:33:55.152912', 'chainsawman', 'chainsawman magic overpowerful', 1),
-(7, 'demon slayer', 'demon slayer', 'images/demonslayer.jpg', '2024-08-29', '00:34:22.249699', 'demon-slayer', 'demaonslyer magic overpowerful', 1);
+(7, 'demon slayer', 'demon slayer', 'images/demonslayer.jpg', '2024-08-29', '00:34:22.249699', 'demon-slayer', 'demaonslyer magic overpowerful', 1),
+(8, 'mariko chan', 'mariko chan horror', 'images/marikochan.jpg', '2024-08-30', '02:43:43.782807', 'mariko-chan', 'mariko chan is an horror movie', 1);
 
 -- --------------------------------------------------------
 
@@ -119,7 +131,8 @@ INSERT INTO `app_folder_post_tags` (`id`, `post_id`, `tagline_id`) VALUES
 (4, 4, 1),
 (5, 5, 1),
 (6, 6, 1),
-(7, 7, 1);
+(7, 7, 1),
+(8, 8, 1);
 
 -- --------------------------------------------------------
 
@@ -511,19 +524,19 @@ ALTER TABLE `app_folder_author`
 -- AUTO_INCREMENT for table `app_folder_command`
 --
 ALTER TABLE `app_folder_command`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `app_folder_post`
 --
 ALTER TABLE `app_folder_post`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `app_folder_post_tags`
 --
 ALTER TABLE `app_folder_post_tags`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `app_folder_tagline`

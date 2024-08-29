@@ -1,4 +1,4 @@
-;{% load static  %}
+{% load static  %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,12 +10,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     
     <title>{%block title%} {%endblock title%}</title>
-    {% comment %} <link rel="stylesheet" href="{% static "style.css" %}"> {% endcomment %}
+    <link rel="stylesheet" href="{% static "style.css" %}">
     {% comment %} {% block css %}{% endblock css %}} {% endcomment %}
 </head>
 <body>
     <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
+<nav class="navbar navbar-expand-lg navbar-light bg-body-dark">
+
     <!-- Container wrapper -->
     <div class="container-fluid">
       <!-- Toggle button -->
@@ -34,7 +35,7 @@
       <!-- Collapsible wrapper -->
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <!-- Navbar brand -->
-        <a class="navbar-brand mt-2 mt-lg-0" href="#">
+        <a class="navbar-brand mt-2 mt-lg-0" href="{% url "main" %}">
           <img
             src=""
             height="15"
@@ -45,16 +46,13 @@
         <!-- Left links -->
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="#">Introduction</a>
+            <a class="nav-link" href="{% url "main" %}">Introduction</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">post</a>
+            <a class="nav-link" href="{% url "all-post" %}">All post</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Commands</a>
+            <a class="nav-link" href="{% url "POst-Add" %}">Add Post</a>
           </li>
         </ul>
         <!-- Left links -->
@@ -139,10 +137,11 @@
       
         <!-- Copyright -->
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
-          © 2020 Copyright:
-          <a class="text-body" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+          © 2024 Copyright:
+          <a class="text-body" href="{% url "main" %}">basil ahamed</a>
         </div>
         <!-- Copyright -->
       </footer>
-</body>
+
+    </body>
 </html>
